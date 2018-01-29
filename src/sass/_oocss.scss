@@ -1,0 +1,210 @@
+@for $i from 1 through 8 {
+    .mt-#{$i*5} {
+        margin-top: 5px * $i !important;
+    }
+    .mr-#{$i*5} {
+        margin-right: 5px * $i !important;
+    }
+    .mb-#{$i*5} {
+        margin-bottom: 5px * $i !important;
+    }
+    .ml-#{$i*5} {
+        margin-left: 5px * $i !important;
+    } 
+    .pt-#{$i*5} {
+        padding-top: 5px * $i !important;
+    }
+    .pr-#{$i*5} {
+        padding-right: 5px * $i !important;
+    }
+    .pb-#{$i*5} {
+        padding-bottom: 5px * $i !important;
+    }
+    .pl-#{$i*5} {
+        padding-left: 5px * $i !important;
+    }
+    .ls-#{$i} {
+        letter-spacing: 1px * $i !important;
+    }
+    .fw-#{$i*100} {
+        font-weight: $i * 100 !important;
+    } 
+    .t-#{$i} {
+        transform: translateY(1px * $i);
+    }
+    .t-#{$i+8} {
+        transform: translateY(8px + $i);
+    }
+    .l-#{$i} {
+        transform: translateX(1px * $i);
+    }
+    .l-#{$i+8} {
+        transform: translateX(8px + $i);
+    }
+    .b-#{$i} {
+        transform: translateY(-1px * $i);
+    }
+    .b-#{$i+8} {
+        transform: translateY(-8px - $i);
+    }
+    .r-#{$i} {
+        transform: translateX(-1px * $i);
+    }
+    .r-#{$i+8} {
+        transform: translateX(-8px - $i);
+    }
+}
+
+.clearfix {
+    clear: both;
+}
+
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-red {
+    color: $red !important;
+}
+
+.text-deep-green {
+    color: $deep-green !important;
+}
+
+.text-light-green {
+    color: $ligh-green !important;
+}
+
+.text-deep-grey {
+    color: $deep-grey !important;
+}
+
+/**
+  * ----- text align ------
+**/
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+/**
+  * ----- background color ------
+**/
+
+.bg-white {
+    background: #fff !important;
+}
+
+.bg-red {
+    background-color: $red !important;
+}
+
+.bg-deep-green {
+    background-color: $deep-green !important;
+}
+
+.bg-light-green {
+    background-color: $ligh-green !important;
+}
+
+.bg-deep-grey {
+    background-color: $deep-grey !important;
+}
+
+/**
+  * ----- box model ------
+**/
+.ml-50p {
+    margin-left: 50%;
+}
+
+.pl-0 {
+    padding-left: 0 !important;
+}
+
+.pr-0 {
+    padding-right: 0 !important;
+}
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+.noPadding {
+    padding: 0 !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+.block {
+    display: block !important;
+}
+
+.vertical-bottom {
+    vertical-align: bottom;
+}
+
+
+/**
+  * ----- text shadow ------
+**/
+.w-shadow {
+    text-shadow: 0 0 20px #fff;
+}
+
+.b-shadow {
+    text-shadow: 0 0 10px #333;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.max740 {
+    max-width: 740px;
+}
+
+.bgCover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.defaultpd {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media screen and (min-width: $screen-md-min) {
+        padding-top:100px;
+        padding-bottom: 100px;
+    }
+}
+
+.fw-900 {
+    font-weight: 900 !important;
+}
+
+.h100 {
+    height: 100%;
+}
+
+/**
+  * ----- transform performance ------
+**/
+.tz0 {
+    transform: translateZ(0);
+    will-change: transform;
+}
