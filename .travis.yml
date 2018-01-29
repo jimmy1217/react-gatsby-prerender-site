@@ -4,7 +4,7 @@ node_js:
 
 env:
   global:
-    secure: TmUT5bjHq8G+I9o3feyU+2XIKCy51Pg9R4BEfA3N5AonWPxNpGzUeDAk+UPzBtgFLrrVgVF3I4bwcIies2HzZCiAZ5YDlDr2AjbOGW5H/7KkJMoXk48y3wWUAHfQE81bO6hEt3qXkR3al/zb22gNeg6aS08fUekzSt0Mbv8bEzO6FVf8TX+xV8pSjS0dnCFvw8nuxglQPib+eUBnKjBExKvLzBKTTYuFz9gcf257SUPu31RoXSI8Kv6Lxm8kjkyvToEHEB+CPAsmrj1X08seykqpMlY1dfUUpfdpEdsb4DsAEBcCry/BUBr7w7QPs4di2j3sl9uncS7b/QwPSMzCybudDH8Rcuq3rVQzAa2OoSEKG4leVCqYwAkF2pWskLEHI4e1qVJkBqIlnogjhNRFvv3WHwmZFcy7oA6v8df3Qi8UTQujhhVGGhbHtxzUBvD6aw1z4dof3ekUN2OVBvAyPwyZiC04XMr4POPD2IAxn9R6sj7esNeewkIOIHN5cJ4z1/yLdPB5b5W1U52mRk7+9cPYRlVnga+11gY5+HcH9PD/Rxgi9x3fcQEXGcqlUdJFgA+qGijB5iyXdYyaBOoR8AYS/oZCxrEJi17+OOzoVcmKcpCnQNupee7PbBQfezXJudNDg4jgV9Uxxzn8RlliRh+bbYHzK58578ENgUUUG3Y=
+    secure: jT4LzOlJ63nIM/mtTXX9Vc75utPqVgKvQkUieFgpFD31STETbyAEUSpXaFU9BCDqAAHyCqT4ioMx+MAmc9Na1EvvnSmA0FUnggzAyJ4R/reHK9bKmt2ObyDn3ekCR9uYjuGA2UZuzlelWQd++5lvZHGFqfYCjeGBqhDE06A1fXwvPeAptAtCtVQ1t0ZN3dSdaF5lQMFxyw5QXjFxjuL3knrjb2GwWEa0p71/aAthHlM7TDdne406qoOG+honWFyTPQM3/DQjNhBPnMZup/aSs6xc/zmtqHnR68hopECfHlKwwSRefZA2VmBD7mPZT3oOaM8x1/+e0SxVXxCuV3k0i+mT7mkHyhvawWLrQie2SPGfmdkc63AEcAkv52yQ0KSLEn5tnnjqalp8v2BewblDGPeowmJVR3Q1atwdzXrlpf7jgzwP3L42MAEuTPUdGGLax+QBoEg0tvff0j64uqYIMFRNL3Bk76NAkd01+QTEDd2uUV/uLg8OlWdlEwLUfUeLgo8yQSBQkzuTzb6Hro2HBICf5liBGmw5AjKsQ1t+haAYPPsBjinsSLQHcCN1cAJrbaYaiXz0sFdfglVtDPSGmISuqsPEnz9lXmBXxVL0L85w1ULAiKbiyYp9xtivAsvdE1Yv3BkA1KmW8kbIDgi0Zm2/D136y8TuMGxHo72sEgQ=
 
 install:
 - yarn install
@@ -12,12 +12,9 @@ install:
 script:
 - yarn build
 
-# deploy:
-#   provider: pages
-#   local-dir: public
-#   skip-cleanup: true
-#   github-token: "$GH_TOKEN"
-#   keep-history: true
-#   verbose: true
-#   on:
-#     branch: master
+deploy:
+  provider: surge
+  project: ./public/
+  domain: react_prerender_site.surge.sh
+  skip_cleanup: true
+  on: master
