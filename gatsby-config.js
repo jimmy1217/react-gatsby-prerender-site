@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/react-gatsby-prerender-site",
   siteMetadata: {
     title: 'Gatsby Default Starter',
   },
