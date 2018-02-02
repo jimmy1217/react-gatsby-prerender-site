@@ -15,6 +15,10 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
       //   console.log(JSON.stringify(current, null, 2));
       //   return current;
       // });
+      config._config.resolve.alias = {
+        'react': 'preact-compat',
+        'react-dom': 'preact-compat'
+      };
       config.plugin("CompressionPlugin", CompressionPlugin, [{
         asset: "[path].gz[query]",
         algorithm: "gzip",
