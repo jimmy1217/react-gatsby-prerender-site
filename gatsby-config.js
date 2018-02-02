@@ -5,7 +5,7 @@ module.exports = {
   },
   pathPrefix: "/react-gatsby-prerender-site",
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'React pre-render site',
   },
   plugins: ['gatsby-plugin-react-helmet', {
     resolve: `gatsby-plugin-sass`,
