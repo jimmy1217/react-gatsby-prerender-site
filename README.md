@@ -1,5 +1,5 @@
 # React static site Pre-render demo
-
+一個以react 作為官網 , 並以gatsby 實現pre-render 的demo
 
 >- gaysby static gzip
 >- gaysby alias 設定
