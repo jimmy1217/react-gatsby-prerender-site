@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import QueueAnim from 'rc-queue-anim';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import ScrollParallax from 'rc-scroll-anim/lib/ScrollParallax';
+// import ScrollParallax from 'rc-scroll-anim/lib/ScrollParallax';
 // img url-loader
 import homeShadow from './../../../assets/homeShadow.png';
 import homeIcon1 from './../../../assets/homeIcon1.png';
@@ -112,28 +112,22 @@ const RealTime = () => {
 
 const Increase = () => {
     return (
-        <ScrollParallax
-            animation={[
-                { y: -180, playScale: [0, 1] },
-            ]}
-        >
-            <div className="roomBanner">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-xs-12 col-sm-6 text-center bgGreen greenContent">
-                            <ScrollOverPack id="roomAnimContent" always={false} playScale={0.3} style={{ overflow: 'hidden' }}>
-                                <QueueAnim key='increase_anim2' type="right" duration={800} interval={300} >
-                                    <h2 key="0" className="text-grey mt-40 mb-40 fw-900 text-white ls-8 tz0">Cras ornare</h2>
-                                    <h3 key="1" className="text-grey mb-5 ls-4 text-white tz0">tellus eget</h3>
-                                    <h3 key="2" className="text-grey mb-5 ls-4 text-white tz0">libero aliquet</h3>
-                                    <h3 key="3" className="text-grey mb-5 ls-4 text-white tz0">Proin a libero congue</h3>
-                                </QueueAnim>
-                            </ScrollOverPack>
-                        </div>
+        <div className="roomBanner">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-xs-12 col-sm-6 text-center bgGreen greenContent">
+                        <ScrollOverPack id="roomAnimContent" always={false} playScale={0.3} style={{ overflow: 'hidden' }}>
+                            <QueueAnim key='increase_anim2' type="right" duration={800} interval={300} >
+                                <h2 key="0" className="text-grey mt-40 mb-40 fw-900 text-white ls-8 tz0">Cras ornare</h2>
+                                <h3 key="1" className="text-grey mb-5 ls-4 text-white tz0">tellus eget</h3>
+                                <h3 key="2" className="text-grey mb-5 ls-4 text-white tz0">libero aliquet</h3>
+                                <h3 key="3" className="text-grey mb-5 ls-4 text-white tz0">Proin a libero congue</h3>
+                            </QueueAnim>
+                        </ScrollOverPack>
                     </div>
                 </div>
             </div>
-        </ScrollParallax>
+        </div>
     );
 }
 
