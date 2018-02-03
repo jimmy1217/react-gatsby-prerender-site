@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import QueueAnim from 'rc-queue-anim';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-
+import { Parallax } from 'rc-scroll-anim';
 // img url-loader
 import homeShadow from './../../../assets/homeShadow.png';
 import homeIcon1 from './../../../assets/homeIcon1.png';
@@ -15,6 +15,7 @@ const PageIndex = (props) => {
             <div className="picBg">
                 <div className="container">
                     <div className="bannerContent">
+
                         <QueueAnim key='bannerContent' type="bottom" duration={900} interval={100} delay={500}>
                             <h2 key="1" className="bTitle h2 text-green text-center fw-500 w-shadow tz0"><span className="text-en fw-900">Lorem Ipsum </span>WebSite</h2>
                             <h3 key="2" className="bSubTitle h3 text-center text-light-black fw-400 ls-3 w-shadow text-en tz0">Neque porro quisquam estqui</h3>
@@ -24,6 +25,7 @@ const PageIndex = (props) => {
                                 <h3 className="text-center text-white ls-4 tz0">Donec / Et enimvel </h3>
                             </div>
                         </QueueAnim>
+
                     </div>
                 </div>
             </div>
@@ -110,22 +112,28 @@ const RealTime = () => {
 
 const Increase = () => {
     return (
-        <div className="roomBanner">
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-xs-12 col-sm-6 text-center bgGreen greenContent">
-                        <ScrollOverPack id="roomAnimContent" always={false} playScale={0.3} style={{ overflow: 'hidden' }}>
-                            <QueueAnim key='increase_anim2' type="right" duration={800} interval={300} >
-                                <h2 key="0" className="text-grey mt-40 mb-40 fw-900 text-white ls-8 tz0">Cras ornare</h2>
-                                <h3 key="1" className="text-grey mb-5 ls-4 text-white tz0">tellus eget</h3>
-                                <h3 key="2" className="text-grey mb-5 ls-4 text-white tz0">libero aliquet</h3>
-                                <h3 key="3" className="text-grey mb-5 ls-4 text-white tz0">Proin a libero congue</h3>
-                            </QueueAnim>
-                        </ScrollOverPack>
+        <Parallax
+            animation={[
+                { y: -180, playScale: [0, 1] },
+            ]}
+        >
+            <div className="roomBanner">
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-xs-12 col-sm-6 text-center bgGreen greenContent">
+                            <ScrollOverPack id="roomAnimContent" always={false} playScale={0.3} style={{ overflow: 'hidden' }}>
+                                <QueueAnim key='increase_anim2' type="right" duration={800} interval={300} >
+                                    <h2 key="0" className="text-grey mt-40 mb-40 fw-900 text-white ls-8 tz0">Cras ornare</h2>
+                                    <h3 key="1" className="text-grey mb-5 ls-4 text-white tz0">tellus eget</h3>
+                                    <h3 key="2" className="text-grey mb-5 ls-4 text-white tz0">libero aliquet</h3>
+                                    <h3 key="3" className="text-grey mb-5 ls-4 text-white tz0">Proin a libero congue</h3>
+                                </QueueAnim>
+                            </ScrollOverPack>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Parallax>
     );
 }
 
