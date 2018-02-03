@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import QueueAnim from 'rc-queue-anim';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import { Parallax } from 'rc-scroll-anim';
+import ScrollParallax from 'rc-scroll-anim/lib/ScrollParallax';
 // img url-loader
 import homeShadow from './../../../assets/homeShadow.png';
 import homeIcon1 from './../../../assets/homeIcon1.png';
@@ -112,7 +112,7 @@ const RealTime = () => {
 
 const Increase = () => {
     return (
-        <Parallax
+        <ScrollParallax
             animation={[
                 { y: -180, playScale: [0, 1] },
             ]}
@@ -133,7 +133,7 @@ const Increase = () => {
                     </div>
                 </div>
             </div>
-        </Parallax>
+        </ScrollParallax>
     );
 }
 
